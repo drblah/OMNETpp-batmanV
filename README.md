@@ -12,7 +12,7 @@ An example of running BATMAN V in the OMNET++ network simulator. The BATMAN mode
     - Install using the manual installation guide found on: https://inet.omnetpp.org/Installation.html
 
 3. Clone this repository to get the Batman5 model and the simulation scenario
-    - I have modifyed BenSliwa's Batman5 model slightly by removing his movement predictive routing. This should **hopefylly** leave us with a pretty standard BATMAN V protocol.
+    - I have modified BenSliwa's Batman5 model slightly by removing his movement predictive routing. This should **hopefylly** leave us with a pretty standard BATMAN V protocol.
   
 4. Install the Batman5 model
     - Copy the Batman5 directory into inet/src/inet/
@@ -32,3 +32,17 @@ An example of running BATMAN V in the OMNET++ network simulator. The BATMAN mode
 
 7. Running simulation
     - You should now have something like this running in the simulation window:
+![](images/simulation_window.png)
+
+## How did I make the simulation?
+- I added a new simulation by right clicking the inet/examples/adhoc directory and choosing New -> Simulation
+  - Fill out the name and select "An empty simulation" as the template
+  - This creates a new directory containing a *.ned file which is the simulation "specification". This file is a plain text file and can be edited both as text and using a visual editor. I did both. (You can choose which mode is used by right clicking the file in Project Explorer and choosing "Open with")
+  - Edit the new *.ned file in the text editor and add: "import inet.Batman5.node.Batman5Router;"
+  - Save the file and re-open it in the NED editor. This should show a visual, drag-and-drop interface. 
+  - Drag a new "Network" from the Types menu
+  - Find the Batman5Router and drag at least one device to the
+  - Add a radioMedium.
+  - Add constantTimePropagation
+  - Add a IPv4NetworkConfigurator and rename it to "configurator"
+  - Run the simulation
