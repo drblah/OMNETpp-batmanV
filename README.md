@@ -1,5 +1,5 @@
 # OMNETpp-batmanV
-An example of running BATMAN V in the OMNET++ network simulator. The BATMAN model is made by BenSliwa
+An example of running BATMAN V in the OMNET++ network simulator. The BATMAN model is made by [BenSliwa](https://github.com/BenSliwa/rawData_batmanV)
 
 
 ## How to
